@@ -1,0 +1,437 @@
+<h1 class="baslik-tr">TÜRKİYE</h1>
+
+<div class="karusel-kapsayici">
+	<button class="ok-sol">‹</button>
+	<div class="karusel-hat">
+		<div class="kart" data-index="0">
+			<img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Takım Üyesi 1">
+		</div>
+		<div class="kart" data-index="1">
+			<img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Takım Üyesi 2">
+		</div>
+		<div class="kart" data-index="2">
+			<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="Takım Üyesi 3">
+		</div>
+		<div class="kart" data-index="3">
+			<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="Takım Üyesi 4">
+		</div>
+		<div class="kart" data-index="4">
+			<img src="https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHByb2Zlc3Npb25hbCUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Takım Üyesi 5">
+		</div>
+		<div class="kart" data-index="5">
+			<img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Takım Üyesi 6">
+		</div>
+	</div>
+	<button class="ok-sag">›</button>
+</div>
+
+<div class="uye-bilgi">
+	<h2 class="uye-isim">David Kim</h2>
+	<p class="uye-gorev">Kurucu</p>
+</div>
+
+<div class="noktalar">
+	<div class="nokta aktif" data-index="0"></div>
+	<div class="nokta" data-index="1"></div>
+	<div class="nokta" data-index="2"></div>
+	<div class="nokta" data-index="3"></div>
+	<div class="nokta" data-index="4"></div>
+	<div class="nokta" data-index="5"></div>
+</div>
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.baslik {
+	font-size: 7.5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+	position: absolute;
+	top: 45px;
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+	white-space: nowrap;
+	font-family: "Arial Black", "Arial Bold", Arial, sans-serif;
+	background: linear-gradient(
+		to bottom,
+		rgb(8 42 123 / 35%) 30%,
+		rgb(255 255 255 / 0%) 76%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.karusel-kapsayici {
+	width: 100%;
+	max-width: 1200px;
+	height: 450px;
+	position: relative;
+	perspective: 1000px;
+	margin-top: 80px;
+}
+
+.karusel-iz {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.kart {
+	position: absolute;
+	width: 280px;
+	height: 380px;
+	background: white;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+	transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	cursor: pointer;
+}
+
+.kart img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.kart.merkez {
+	z-index: 10;
+	transform: scale(1.1) translateZ(0);
+}
+
+.kart.merkez img {
+	filter: none;
+}
+
+.kart.sol-2 {
+	z-index: 1;
+	transform: translateX(-400px) scale(0.8) translateZ(-300px);
+	opacity: 0.7;
+}
+
+.kart.sol-2 img {
+	filter: grayscale(100%);
+}
+
+.kart.sol-1 {
+	z-index: 5;
+	transform: translateX(-200px) scale(0.9) translateZ(-100px);
+	opacity: 0.9;
+}
+
+.kart.sol-1 img {
+	filter: grayscale(100%);
+}
+
+.kart.sag-1 {
+	z-index: 5;
+	transform: translateX(200px) scale(0.9) translateZ(-100px);
+	opacity: 0.9;
+}
+
+.kart.sag-1 img {
+	filter: grayscale(100%);
+}
+
+.kart.sag-2 {
+	z-index: 1;
+	transform: translateX(400px) scale(0.8) translateZ(-300px);
+	opacity: 0.7;
+}
+
+.kart.sag-2 img {
+	filter: grayscale(100%);
+}
+
+.kart.gizli {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.uye-bilgi {
+	text-align: center;
+	margin-top: 40px;
+	transition: all 0.5s ease-out;
+}
+
+.uye-isim {
+	color: rgb(8, 42, 123);
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+	position: relative;
+	display: inline-block;
+}
+
+.uye-isim::before,
+.uye-isim::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	width: 100px;
+	height: 2px;
+	background: rgb(8, 42, 123);
+}
+
+.uye-isim::before {
+	left: -120px;
+}
+
+.uye-isim::after {
+	right: -120px;
+}
+
+.uye-rol {
+	color: #848696;
+	font-size: 1.5rem;
+	font-weight: 500;
+	opacity: 0.8;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	padding: 10px 0;
+	margin-top: -15px;
+	position: relative;
+}
+
+.noktalar {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 60px;
+}
+
+.nokta {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: rgba(8, 42, 123, 0.2);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.nokta.aktif {
+	background: rgb(8, 42, 123);
+	transform: scale(1.2);
+}
+
+.yon-ok {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(8, 42, 123, 0.6);
+	color: white;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 20;
+	transition: all 0.3s ease;
+	font-size: 1.5rem;
+	border: none;
+	outline: none;
+	padding-bottom: 4px;
+}
+
+.yon-ok:hover {
+	background: rgba(0, 0, 0, 0.8);
+	transform: translateY(-50%) scale(1.1);
+}
+
+.sola {
+	left: 20px;
+	padding-right: 3px;
+}
+
+.saga {
+	right: 20px;
+	padding-left: 3px;
+}
+
+@media (max-width: 768px) {
+	.kart {
+		width: 200px;
+		height: 280px;
+	}
+
+	.kart.sol-2 {
+		transform: translateX(-250px) scale(0.8) translateZ(-300px);
+	}
+
+	.kart.sol-1 {
+		transform: translateX(-120px) scale(0.9) translateZ(-100px);
+	}
+
+	.kart.sag-1 {
+		transform: translateX(120px) scale(0.9) translateZ(-100px);
+	}
+
+	.kart.sag-2 {
+		transform: translateX(250px) scale(0.8) translateZ(-300px);
+	}
+
+	.uye-isim {
+		font-size: 2rem;
+	}
+
+	.uye-rol {
+		font-size: 1.2rem;
+	}
+
+	.uye-isim::before,
+	.uye-isim::after {
+		width: 50px;
+	}
+
+	.uye-isim::before {
+		left: -70px;
+	}
+
+	.uye-isim::after {
+		right: -70px;
+	}
+}
+</style>
+
+<script>const uyeler = [
+  { isim: "Emily Kim", rol: "Kurucu" },
+  { isim: "Michael Steward", rol: "Yaratıcı Yönetmen" },
+  { isim: "Emma Rodriguez", rol: "Baş Geliştirici" },
+  { isim: "Julia Gimmel", rol: "UX Tasarımcısı" },
+  { isim: "Lisa Anderson", rol: "Pazarlama Müdürü" },
+  { isim: "James Wilson", rol: "Ürün Müdürü" }
+];
+
+const kartlar = document.querySelectorAll(".kart");
+const noktalar = document.querySelectorAll(".nokta");
+const uyeIsim = document.querySelector(".uye-isim");
+const uyeRol = document.querySelector(".uye-rol");
+const solOk = document.querySelector(".yon-ok.sol");
+const sagOk = document.querySelector(".yon-ok.sag");
+let aktifIndex = 0;
+let animasyonDevam = false;
+
+function karuseliGuncelle(yeniIndex) {
+  if (animasyonDevam) return;
+  animasyonDevam = true;
+
+  aktifIndex = (yeniIndex + kartlar.length) % kartlar.length;
+
+  kartlar.forEach((kart, i) => {
+    const fark = (i - aktifIndex + kartlar.length) % kartlar.length;
+
+    kart.classList.remove(
+      "merkez",
+      "sol-1",
+      "sol-2",
+      "sag-1",
+      "sag-2",
+      "gizli"
+    );
+
+    if (fark === 0) {
+      kart.classList.add("merkez");
+    } else if (fark === 1) {
+      kart.classList.add("sag-1");
+    } else if (fark === 2) {
+      kart.classList.add("sag-2");
+    } else if (fark === kartlar.length - 1) {
+      kart.classList.add("sol-1");
+    } else if (fark === kartlar.length - 2) {
+      kart.classList.add("sol-2");
+    } else {
+      kart.classList.add("gizli");
+    }
+  });
+
+  noktalar.forEach((nokta, i) => {
+    nokta.classList.toggle("aktif", i === aktifIndex);
+  });
+
+  uyeIsim.style.opacity = "0";
+  uyeRol.style.opacity = "0";
+
+  setTimeout(() => {
+    uyeIsim.textContent = uyeler[aktifIndex].isim;
+    uyeRol.textContent = uyeler[aktifIndex].rol;
+    uyeIsim.style.opacity = "1";
+    uyeRol.style.opacity = "1";
+  }, 300);
+
+  setTimeout(() => {
+    animasyonDevam = false;
+  }, 800);
+}
+
+solOk.addEventListener("click", () => {
+  karuseliGuncelle(aktifIndex - 1);
+});
+
+sagOk.addEventListener("click", () => {
+  karuseliGuncelle(aktifIndex + 1);
+});
+
+noktalar.forEach((nokta, i) => {
+  nokta.addEventListener("click", () => {
+    karuseliGuncelle(i);
+  });
+});
+
+kartlar.forEach((kart, i) => {
+  kart.addEventListener("click", () => {
+    karuseliGuncelle(i);
+  });
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    karuseliGuncelle(aktifIndex - 1);
+  } else if (e.key === "ArrowRight") {
+    karuseliGuncelle(aktifIndex + 1);
+  }
+});
+
+let baslangicX = 0;
+let bitisX = 0;
+
+document.addEventListener("touchstart", (e) => {
+  baslangicX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener("touchend", (e) => {
+  bitisX = e.changedTouches[0].screenX;
+  kaydirmayiIsle();
+});
+
+function kaydirmayiIsle() {
+  const esik = 50;
+  const fark = baslangicX - bitisX;
+
+  if (Math.abs(fark) > esik) {
+    if (fark > 0) {
+      karuseliGuncelle(aktifIndex + 1);
+    } else {
+      karuseliGuncelle(aktifIndex - 1);
+    }
+  }
+}
+
+karuseliGuncelle(0);
+
+</script>

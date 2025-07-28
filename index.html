@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Business Casual - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="navba/navbar.html" rel="stylesheet" />
+    </head>
+    <body>
+         <div id="navbar-container"></div>
+
+  <script>
+    fetch("navba/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+        <header>
+            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+                <span class="site-heading-upper text-primary mb-3">TÜKİYE YÖRESEL BİLGİLER</span>
+                <span class="site-heading-lower">üLKEMİZİN DOĞAL GÜZELLİKLERİ</span>
+            </h1>
+        </header>
+        <!-- Navigation-->
+         
+        <section class="page-section clearfix">
+            <div class="container">
+                <div class="intro">
+                   <img
+  class="intro-img img-fluid mb-3 mb-lg-0 rounded"
+  src="assets/img/intro.webp"
+  alt="..."
+  style="width: 800px; height: 550px;" />
+                    <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                        <h2 class="section-heading mb-4">
+                <!--<h4>HOŞ GELDİNİZ!</h4>
+<h2>Türkiye'nin Yöresel Zenginliklerini Keşfedin</h2>
+<p>
+ </p>*/ -->
+                        
+
+
+                            <span class="section-heading-lower">TÜRKİYE'NİN YÖRESEL LEZZETLERİ</span>
+                        </h2>
+                        <div class="intro-box">
+                        <p class="mb-3"> Bu site, Türkiye'nin dört bir yanındaki şehirlerin eşsiz lezzetlerini, kültürel miraslarını ve doğal güzelliklerini sizlerle buluşturmak için hazırlandı. İster Adana kebabını, ister Rize çayını, ister Kapadokya'nın büyülü manzarasını keşfetmek isteyin — doğru yerdesiniz!
+</p>
+                        <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">KEŞFET</a></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+<div class="slider-alani">
+       <div class="wrapper">
+                        
+<style> .intro-box {
+  margin-bottom: 30px;
+}
+
+.slider-alani {
+  margin-top: 40px; /* ya da istediğin kadar boşluk */
+
+  justify-content: center;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+* {
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    .kart-container {
+ overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 20px;
+  margin: 0 auto;
+  scrollbar-width: none;
+    }
+
+
+    .kart {
+      display: inline-block;
+      width: 300px;
+      height: 450px; /* 2:3 oranı */
+      margin-right: 20px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      position: relative;
+      color: white;
+      text-shadow: 0 1px 4px black;
+    }
+    .kart .baslik {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+ .wrapper::-webkit-scrollbar {
+  display: none;}
+
+       .wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+       }
+.wi {
+     height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.cacard {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.cacard[for="c1"] {
+    background-image: url('../assets/img/dans.png');
+}
+
+.cacard[for="c2"] {
+    background-image: url('../assets/img/geleneksel.png');
+}
+.cacard[for="c3"] {
+    background-image: url('/assets/img/calgi.png');
+}
+.cacard[for="c4"] {
+    background-image: url('/assets/img/tatli yemek.png');
+}
+
+.notepad-container {
+  margin: 30px auto;
+  max-width: 500px;
+  background: #fff8dc;
+  border: 4px dashed #ff6f61;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-family: 'Comic Sans MS', cursive;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.notepad-header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d35400;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.notepad-container input,
+.notepad-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-size: 16px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.notepad-container button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.notepad-container button:hover {
+  background-color: #e74c3c;
+}
+
+.notlar-alani {
+  max-width: 90%;
+  margin: 40px auto;
+}
+
+.notlar-alani h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.not-listesi {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.not-karti {
+  min-width: 250px;
+  background: #fffef2;
+  border: 2px solid #ffd1b3;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.not-karti strong {
+  display: block;
+  color: #d35400;
+  margin-bottom: 8px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+        <div class="wi">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="cacard">
+                <div class="row">
+                    <div class="icon">1</div>
+                    <div class="description">
+                        <h4>Winter</h4>
+                        <p>Winter has so much to offer -
+                         creative activities</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2" >
+            <label for="c2" class="cacard">
+                <div class="row">
+                    <div class="icon">2</div>
+                    <div class="description">
+                        <h4>Digital Technology</h4>
+                        <p>Gets better every day -
+                         stay tuned</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3" >
+            <label for="c3" class="cacard">
+                <div class="row">
+                    <div class="icon">3</div>
+                    <div class="description">
+                        <h4>Globalization</h4>
+                        <p>Help people all over the world</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4" >
+            <label for="c4" class="cacard">
+                <div class="row">
+                    <div class="icon">4</div>
+                    <div class="description">
+                        <h4>New technologies</h4>
+                        <p>Space engineering becomes
+                         more and more advanced</p>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+        </section>  
+        
+  <div class="container text-center mt-5">
+   <b> <h2 class="site-heading-upper text-primary mb-3 ">TÜRKİYE BÖLGELERİ</h2></b>
+    <div class="kart-container" id="kartKaydirici">
+      <div class="kart" style="  background-image: url('/assets/img/20250725_1020_Akdeniz\ Bölgesi\ Güzellikleri_simple_compose_01k1073vnse0e8tyw9nt3e38bs.png');">
+        <div class="baslik">Akdeniz Bölgesi</div>
+      </div>
+      <div class="kart" style="background-image: url('/assets/img/20250725_1020_İç\ Anadolu\'nun\ Hazineleri_simple_compose_01k1074j89exs8sfezwy4tpvhy.png');">
+        <div class="baslik">İç Anadolu Bölgesi</div>
+      </div>
+      <div class="kart" style="background-image: url('/assets/img/20250725_0947_Marmara\'nın\ Güzellikleri_simple_compose_01k10591x4fjw9zr31ax07t8y2.png');">
+        <div class="baslik">Marmara Bölgesi</div>
+      </div>
+      <div class="kart" style="background-image: url('/assets/img/20250725_1009_Ege\'nin\ Güzellikleri_remix_01k106fm91fgwv8jy37xeea37v.png');">
+        <div class="baslik">Ege Bölgesi</div>
+      </div>
+      <div class="kart" style="background-image: url('/assets/img/20250725_1034_Doğu\ ve\ Güneydoğu\ Türkiye_simple_compose_01k107xaz8faw9dwba7q43z9av.png');">
+        <div class="baslik">Doğu Anadolu ve Güneydoğu Anadolu Bölgesi</div>
+      </div>
+      <div class="kart" style="background-image: url('/assets/img/20250725_1045_Karadeniz\ Kahvaltısı_remix_01k108ghv2f3n9y9fz40vd97bw.png');">
+        <div class="baslik">Karadeniz Bölgesi</div>
+      </div>
+    </div>
+  </div>
+<input type="text" id="adsoyad" placeholder="Ad Soyadınızı girin" />
+
+  <script>
+    const kaydirici = document.getElementById('kartKaydirici');
+    setInterval(() => {
+      kaydirici.scrollBy({ left: 320, behavior: 'smooth' });
+      if (kaydirici.scrollLeft + kaydirici.clientWidth >= kaydirici.scrollWidth) {
+        kaydirici.scrollTo({ left: 0, behavior: 'smooth' });
+      }
+    }, 3000); // 3 saniyede bir kayar
+  </script>
+  
+
+<div style="position: relative; width: 100%; padding-top: 56.25%; overflow: hidden;">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+  >
+    <source src="http://webtvpanel.kultur.gov.tr/WebTV_Contents/Publish/05062020205309/homojeni60snitri200605ir2-1080p.mp4" type="video/mp4" />
+  </video>
+</div>
+
+
+ <style>
+@media (max-width: 768px) {
+  .wrap-video {
+    padding-top: 70% !important; /* mobilde 16:9 yerine 10:7 gibi dikey oran */
+  }
+}
+</style>
+
+<script>
+function temizleNot() {
+<input type="text" id="adsoyad" placeholder="Ad Soyadınızı girin" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 10px; border: 1px solid #ccc;" />
+
+
+  const textarea = document.getElementById("notepad");
+  textarea.value = "";
+  textarea.placeholder = "Yeni notunuzu buraya yazabilirsiniz...";
+}
+</script>
+
+</div>
+            </div>
+        </div>
+<script>
+function notEkle() {
+  const adsoyad = document.getElementById("adsoyad").value.trim();
+  const not = document.getElementById("notepad").value.trim();
+
+  if (!adsoyad || !not) {
+    alert("Lütfen ad soyad ve notu doldurun.");
+    return;
+  }
+
+  const yeniNot = { adsoyad, not };
+  const oncekiNotlar = JSON.parse(localStorage.getItem("notlar")) || [];
+  oncekiNotlar.push(yeniNot);
+  localStorage.setItem("notlar", JSON.stringify(oncekiNotlar));
+
+  document.getElementById("adsoyad").value = "";
+  document.getElementById("notepad").value = "";
+  notlariGoster();
+}
+
+function notlariGoster() {
+  const notListesi = document.getElementById("not-listesi");
+  notListesi.innerHTML = "";
+  const notlar = JSON.parse(localStorage.getItem("notlar")) || [];
+
+  notlar.forEach((item) => {
+    const kart = document.createElement("div");
+    kart.className = "not-karti";
+    kart.innerHTML = `<strong>${item.adsoyad}</strong><p>${item.not}</p>`;
+    notListesi.appendChild(kart);
+  });
+}
+
+function tumNotlariTemizle() {
+  if (confirm("Tüm notlar silinsin mi?")) {
+    localStorage.removeItem("notlar");
+    notlariGoster();
+  }
+}
+
+window.onload = notlariGoster;
+</script>
+   
+<div class="notepad-container">
+  <div class="notepad-header">🇹🇷 Türkiye Hakkında Not Bırak ✨</div>
+<input type="text" id="adsoyad" placeholder="Ad Soyadınızı girin" />
+
+  <textarea id="notepad" placeholder="Türkiye'nin eşsiz güzellikleri hakkında not yazın..."></textarea>
+  <button onclick="notEkle()">📌 Notu Kaydet</button>
+  <button onclick="tumNotlariTemizle()">🧹 Hepsini Sil</button>
+  <h3 style="text-align:center; margin-top: 40px;">📒 Diğer Ziyaretçilerin Notları</h3>
+<div id="not-listesi" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;"></div>
+</div>
+
+
+
+        <footer class="footer text-faded text-center py-5">
+            <div class="container"><p class="m-0 small">Türkiyem &copy; 2025</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
