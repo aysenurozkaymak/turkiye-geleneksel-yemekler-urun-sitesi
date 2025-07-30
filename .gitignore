@@ -1,0 +1,22 @@
+# VSCode ayar klasörü
+.vscode/
+
+# Sistem dosyaları
+.DS_Store         # macOS
+Thumbs.db         # Windows
+
+# Geçici / önbellek dosyaları
+*.log
+*.tmp
+
+# Git ile ilgili yanlışlıkla eklenebilecek klasörler
+.idea/
+*.swp
+*.swo
+
+# node_modules (ileride JS package kullanırsan oluşabilir)
+node_modules/
+
+# Build klasörleri (kullanıyorsan)
+dist/
+build/
